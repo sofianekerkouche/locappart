@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Direction 3: L'Empreinte Modulaire - Symbol -->
+  <defs>
+    <linearGradient id="d3-pillar1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#194B60"/>
+      <stop offset="100%" stop-color="#0D222E"/>
+    </linearGradient>
+    <linearGradient id="d3-pillar2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#23617A"/>
+      <stop offset="100%" stop-color="#123847"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pilier 1 (Grand bâtiment / Résidence) -->
+  <rect x="20" y="14" width="22" height="68" rx="6" fill="url(#d3-pillar1)"/>
+  
+  <!-- Pilier 2 (Deuxième structure / Résidence partenaire) -->
+  <rect x="46" y="32" width="18" height="50" rx="6" fill="url(#d3-pillar2)"/>
+  
+  <!-- Module Appartement Turquoise (Ancrage & modernité) -->
+  <rect x="68" y="56" width="18" height="26" rx="5" fill="#2EB8A1"/>
+  
+  <!-- Accent Lumière / Foyer Ambre Doré (Chaleur & hospitalité) -->
+  <circle cx="77" cy="44" r="5" fill="#E29D52"/>
+</svg>

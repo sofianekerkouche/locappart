@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Direction 2: Le Monogramme Fluide & Protecteur - Symbol -->
+  <defs>
+    <linearGradient id="d2-petrol" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A4A5E"/>
+      <stop offset="100%" stop-color="#0E2833"/>
+    </linearGradient>
+    <linearGradient id="d2-mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE0CC"/>
+      <stop offset="100%" stop-color="#41BBAA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Forme enveloppante extérieure (L protecteur continu) -->
+  <path d="M26 22C26 15.3726 31.3726 10 38 10C44.6274 10 50 15.3726 50 22V58H68C74.6274 58 80 63.3726 80 70C80 76.6274 74.6274 82 68 82H38C31.3726 82 26 76.6274 26 70V22Z" fill="url(#d2-petrol)"/>
+
+  <!-- Arche intérieure lumineuse / Le seuil chaleureux (imbrication protectrice) -->
+  <path d="M42 36C42 27.1634 49.1634 20 58 20C66.8366 20 74 27.1634 74 36V54H58C49.1634 54 42 45.9543 42 36Z" fill="url(#d2-mint)"/>
+  
+  <!-- Disque central de respiration / intimité -->
+  <circle cx="58" cy="36" r="6" fill="#FAF8F5"/>
+</svg>

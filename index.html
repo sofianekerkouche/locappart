@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOCAPPART — Location d'Appartements Meublés &amp; Résidences à Tizi Ouzou</title>
+  <meta name="description" content="Locappart : appartements 100% meublés à Tizi Ouzou avec charges comprises (eau H24, chauffage central, fibre, clim). Résidences sécurisées réservées aux femmes, studios (16-35m²), F1 (35m²), F2 (40-46m²) et F3 (50-80m²).">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/final/favicon.svg">
+  
+  <!-- Polices Google Fonts : Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <!-- Toast Notification -->
+  <div id="site-toast" class="site-toast" role="alert" aria-live="polite"></div>
+
+  <!-- FLOATING QUICK CONTACT BAR (TEL + WHATSAPP EN AVANT) -->
+  <div class="floating-contact-bar" id="floating-contact-bar">
+    <a href="https://wa.me/213550000000?text=Bonjour%20Locappart,%20je%20souhaite%20des%20renseignements%20sur%20vos%20logements%20meubl%C3%A9s" target="_blank" rel="noopener noreferrer" class="float-btn float-whatsapp" title="Échanger directement par WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.56C8.84 7.56 8.52 7.63 8.25 7.93C7.99 8.22 7.23 8.93 7.23 10.39C7.23 11.85 8.29 13.26 8.44 13.46C8.59 13.66 10.5 16.78 13.5 17.95C15.97 18.92 16.48 18.73 17.02 18.68C17.56 18.63 18.77 17.96 19.02 17.26C19.27 16.56 19.27 15.96 19.19 15.83C19.12 15.71 18.92 15.64 18.62 15.49C18.32 15.34 16.84 14.61 16.57 14.51C16.29 14.41 16.09 14.36 15.89 14.66C15.69 14.96 15.12 15.64 14.95 15.84C14.77 16.04 14.6 16.06 14.3 15.91C14 15.76 12.75 15.35 11.26 14.02C10.1 12.98 9.32 11.69 9.17 11.44C9.02 11.19 9.15 11.05 9.3 10.9C9.44 10.76 9.61 10.53 9.76 10.36C9.91 10.19 9.96 10.06 10.06 9.86C10.16 9.66 10.11 9.49 10.04 9.34C9.96 9.19 9.36 7.72 9.11 7.12C8.87 6.54 8.62 6.62 8.44 6.61C8.26 6.61 8.06 6.61 7.86 6.61L9.04 7.56Z"/></svg>
+      <span class="float-label">WhatsApp Direct</span>
+    </a>
+    <a href="tel:+213550000000" class="float-btn float-phone" title="Appeler la gestion locative">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+      <span class="float-label">0550 00 00 00</span>
+    </a>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo officiel validé -->
+      <a href="#accueil" class="brand-logo-link" aria-label="Retour à l'accueil Locappart">
+        <img class="brand-logo-svg" src="assets/logos/final/logo-horizontal-light.svg" alt="Locappart — Logements meublés à Tizi Ouzou">
+      </a>
+
+      <!-- Actions Header : Appel direct + Bouton formulaire de contact -->
+      <div class="header-actions">
+        <a href="tel:+213550000000" class="btn-phone-header" title="Appeler directement la gestion locative">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+          <span class="header-phone-txt">0550 00 00 00</span>
+        </a>
+        <a href="#contact" class="btn-contact-header" title="Accéder au formulaire de contact">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Nous contacter</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="accueil">
+      <div class="hero-background-wrapper">
+        <img src="assets/images/apt_living_room_1793132217045.jpg" alt="Appartement meublé de standing à Tizi Ouzou" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>PARC RÉSIDENTIEL PRIVÉ • TIZI OUZOU</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title-main">Votre appartement 100% meublé.</span>
+          <span class="hero-title-sub">Sécurité, calme et charges comprises.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Des logements allant du studio au F3 dans les quartiers clés de la ville de Tizi-Ouzou : deux résidences privatisées exclusives pour femmes indépendantes, et de nombreux appartements pour cadres, professionnels et couples.
+        </p>
+
+        <!-- Barre de recherche rapide & filtres interactifs -->
+        <div class="search-filter-card" role="search">
+          <div class="search-field">
+            <label for="filter-type" class="search-label">Typologie de logement</label>
+            <div class="select-wrapper">
+              <select id="filter-type" class="search-select">
+                <option value="all">Toutes les typologies</option>
+                <option value="studio">Studios meublés (16 à 35 m²)</option>
+                <option value="f1">F1 meublés (35 m²)</option>
+                <option value="f2">F2 meublés (40 à 46 m²)</option>
+                <option value="f3">F3 meublés (50 à 80 m²)</option>
+                <option value="femme">Résidences Réservées Femmes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="search-field">
+            <label for="filter-location" class="search-label">Quartier à Tizi Ouzou</label>
+            <div class="select-wrapper">
+              <select id="filter-location" class="search-select">
+                <option value="all">Tous les quartiers</option>
+                <option value="tizi-ville">Tizi-Ouzou Ville</option>
+                <option value="sud-ouest">Sud Ouest / Zone des dépôts</option>
+                <option value="thala-allam">Thala-Allam</option>
+                <option value="bouaziz">Bouaziz / Quatre chemins</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="search-field">
+            <label for="filter-duration" class="search-label">Durée de séjour</label>
+            <div class="select-wrapper">
+              <select id="filter-duration" class="search-select">
+                <option value="moyen">Moyen terme (de 3mois à 1 an)</option>
+                <option value="long">Long terme (1an et +)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="button" class="search-submit-btn" id="btn-hero-search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+            <span>Filtrer les logements</span>
+          </button>
+        </div>
+
+        <!-- Engagements Clés sous le Hero -->
+        <div class="hero-highlights-strip">
+          <div class="highlight-capsule">
+            <span class="capsule-icon">🔒</span>
+            <span>Portes blindées &amp; Digicode</span>
+          </div>
+          <div class="highlight-capsule">
+            <span class="capsule-icon">📹</span>
+            <span>Caméras de surveillance</span>
+          </div>
+          <div class="highlight-capsule">
+            <span class="capsule-icon">💧</span>
+            <span>Eau courante H24 garantie</span>
+          </div>
+          <div class="highlight-capsule">
+            <span class="capsule-icon">🔥</span>
+            <span>Chauffage centralisé</span>
+          </div>
+          <div class="highlight-capsule capsule-accent">
+            <span class="capsule-icon">✨</span>
+            <span>Toutes charges comprises</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNIÈRE DE CONTACT RAPIDE : TÉLÉPHONE & CONTACT MIS EN AVANT -->
+    <section class="section-quick-cta">
+      <div class="section-container">
+        <div class="quick-cta-bar">
+          <div class="cta-bar-actions">
+            <a href="tel:+213550000000" class="btn-cta-phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+              <span>0550 00 00 00</span>
+            </a>
+            <a href="#contact" class="btn-cta-contact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Formulaire de contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION FOCUS SÉCURITÉ, SÉRÉNITÉ & RÈGLEMENT INTÉRIEUR -->
+    <section class="section-security" id="securite">
+      <div class="section-container">
+        
+        <div class="security-box">
+          <div class="security-text-col">
+            <span class="section-pill">SÉCURITÉ &amp; CADRE DE VIE</span>
+            <h2 class="security-title">Une sérénité absolue garantie par une rigueur sans compromis</h2>
+            <p class="security-lead">
+              Chez Locappart, nous accordons une <strong>importance capitale au règlement intérieur</strong>. Nos résidences et appartements sont des havres de paix où chaque résident a droit à un calme irréprochable et à une sécurité sans faille.
+            </p>
+
+            <div class="security-points-list">
+              <div class="sec-point">
+                <div class="sec-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#58CDBF" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0110 0v4"></path></svg>
+                </div>
+                <div class="sec-content">
+                  <strong>Portes blindées &amp; Accès contrôlés avec digicodes</strong>
+                  <p>Accès aux immeubles filtré par code confidentiel et badge électronique. Chaque résidence/immeuble dispose d'une porte d'entrée blindée multipoints.</p>
+                </div>
+              </div>
+
+              <div class="sec-point">
+                <div class="sec-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#58CDBF" stroke-width="2.2"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                </div>
+                <div class="sec-content">
+                  <strong>Caméras de surveillance 24h/24</strong>
+                  <p>Vidéosurveillance continue des halls d'entrée, couloirs et parkings pour prévenir toute intrusion et rassurer les résidents.</p>
+                </div>
+              </div>
+
+              <div class="sec-point">
+                <div class="sec-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#58CDBF" stroke-width="2.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <div class="sec-content">
+                  <strong>Règlement intérieur strict &amp; Voisinage sélectionné</strong>
+                  <p>Interdiction des nuisances sonores, respect strict des horaires, sélection attentive des locataires. Idéal pour étudier, se reposer ou travailler sereinement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="security-card-visual">
+            <div class="residence-rule-card">
+              <div class="rule-card-header">
+                <span class="rule-badge">CHARTE DE TRANQUILLITÉ</span>
+                <h4>Quelques règles d'or de Locappart</h4>
+              </div>
+              <ul class="rule-list">
+                <li><span class="check-mark">✓</span> Accès réservé aux seuls locataires identifiés</li>
+                <li><span class="check-mark">✓</span> Silence garanti dès 22h dans les parties communes</li>
+                <li><span class="check-mark">✓</span> Gardiennage et régie sur place 7j/7</li>
+                <li><span class="check-mark">✓</span> Assistance technique immédiate en cas d'urgence</li>
+                <li><span class="check-mark">✓</span> Espaces communs entretenus et désinfectés chaque semaine</li>
+              </ul>
+              <div class="rule-card-footer">
+                <span>Interlocuteur unique &amp; direct de la gestion locative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION TOUT COMPRIS : CHARGES, EAU H24, CHAUFFAGE & INTERNET -->
+    <section class="section-all-inclusive" id="charges-comprises">
+      <div class="section-container">
+        
+        <div class="section-heading-center">
+          <span class="section-pill">CONFORT DE VIE OPTIMAL</span>
+          <h2 class="section-title">
+            <span class="title-block">Tout est compris dans votre loyer.</span>
+            <span class="title-block title-accent">Zéro charge imprévue.</span>
+          </h2>
+          <p class="section-subtitle">
+            Oubliez les factures séparées et les coupures.
+          </p>
+        </div>
+
+        <div class="inclusive-grid">
+          
+          <div class="inclusive-card">
+            <div class="inclusive-card-header">
+              <span class="inclusive-emoji">💧</span>
+              <h3 class="inclusive-name">Eau Courante H24 Garantie</h3>
+            </div>
+            <p class="inclusive-text">
+              Système de réservoirs (bâches à eau de grande capacité avec suppresseurs automatiques). <strong>Eau chaude sanitaire continue</strong> disponible jour et nuit.
+            </p>
+          </div>
+
+          <div class="inclusive-card">
+            <div class="inclusive-card-header">
+              <span class="inclusive-emoji">🔥</span>
+              <h3 class="inclusive-name">Chauffage Central Intégral</h3>
+            </div>
+            <p class="inclusive-text">
+              Chauffage central individuel dans tous les appartements ET <strong>chauffage continu dans les parties communes</strong> (halls et paliers tempérés en hiver).
+            </p>
+          </div>
+
+          <div class="inclusive-card">
+            <div class="inclusive-card-header">
+              <span class="inclusive-emoji">❄️</span>
+              <h3 class="inclusive-name">Climatisation</h3>
+            </div>
+            <p class="inclusive-text">
+              Climatiseurs récents installés dans les logements (en option) pour un confort thermique optimal en été.
+            </p>
+          </div>
+
+          <div class="inclusive-card">
+            <div class="inclusive-card-header">
+              <span class="inclusive-emoji">📶</span>
+              <h3 class="inclusive-name">Connexion Fibre Haut Débit</h3>
+            </div>
+            <p class="inclusive-text">
+              Réseau Wifi haut débit actif dès votre emménagement. Vitesse stable et illimitée pour vos cours en ligne, streaming ou visioconférences.
+            </p>
+          </div>
+
+          <div class="inclusive-card">
+            <div class="inclusive-card-header">
+              <span class="inclusive-emoji">🛋️</span>
+              <h3 class="inclusive-name">100% Entièrement Meublés</h3>
+            </div>
+            <p class="inclusive-text">
+              Literie complète avec draps, canapés contemporains, penderies, téléviseur écran plat et cuisine équipée avec électroménager et vaisselle.
+            </p>
+          </div>
+
+          <div class="inclusive-card">
+            <div class="inclusive-card-header">
+              <span class="inclusive-emoji">🧺</span>
+              <h3 class="inclusive-name">Laverie / Buanderie Disponible</h3>
+            </div>
+            <p class="inclusive-text">
+              Machine à laver privative dans la plupart des appartements ou accès à l'espace buanderie/laverie sécurisé au sein des résidences.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION FOCUS : LES 2 RÉSIDENCES EXCLUSIVEMENT RÉSERVÉES AUX FEMMES -->
+    <section class="section-residence-women" id="residences-femmes">
+      <div class="section-container">
+        <h2 class="spotlight-section-title">
+          <span class="spotlight-title-line">Deux résidences pensées exclusivement</span>
+          <span class="spotlight-title-line spotlight-title-accent">pour les femmes indépendantes.</span>
+        </h2>
+
+        <div class="women-spotlight-card">
+          <div class="spotlight-content">
+            <div class="spotlight-badge spotlight-badge-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>ESPACES PRIVATISÉS &amp; SÉCURISÉS</span>
+            </div>
+            <p class="spotlight-text">
+              À Tizi Ouzou, nous savons combien trouver un logement rassurant, calme et de standing est essentiel pour une étudiante, une jeune active, une enseignante ou une femme cadre en mission.
+            </p>
+            <p class="spotlight-text">
+              Nos deux résidences dédiées réunissent des dizaines de studios et appartements privatifs au sein d'un environnement strictement réservé, où règnent respect, sécurité et confort moderne.
+            </p>
+
+            <div class="guarantees-grid">
+              <div class="guarantee-item">
+                <div class="guarantee-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#58CDBF" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0110 0v4"></path></svg>
+                </div>
+                <div>
+                  <strong>Sécurité &amp; Contrôle d'accès</strong>
+                  <span>Portes blindées, digicodes, caméras dans les communs et contrôle strict des entrées.</span>
+                </div>
+              </div>
+
+              <div class="guarantee-item">
+                <div class="guarantee-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#58CDBF" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </div>
+                <div>
+                  <strong>Autonomie &amp; Intimité Totale</strong>
+                  <span>Chaque résidente dispose de son logement privatif avec cuisine et salle de bain privatives.</span>
+                </div>
+              </div>
+
+              <div class="guarantee-item">
+                <div class="guarantee-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#58CDBF" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <div>
+                  <strong>Régisseuse de résidence</strong>
+                  <span>Une interlocutrice dédiée pour la conciergerie, le courrier et les urgences techniques.</span>
+                </div>
+              </div>
+
+              <div class="guarantee-item">
+                <div class="guarantee-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#58CDBF" stroke-width="2"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"></path></svg>
+                </div>
+                <div>
+                  <strong>Tout inclus &amp; Buanderie</strong>
+                  <span>Eau H24 continue, chauffage parties communes, fibre haut débit et laverie disponible.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotlight-visual">
+            <div class="spotlight-image-card">
+              <img src="assets/images/738335356_122189694764906431_7431007184578968364_n.jpg" alt="Façade de la Résidence sécurisée Locappart à Tizi Ouzou" class="spotlight-main-img">
+            </div>
+          </div>
+
+          <div class="spotlight-cta-row spotlight-cta-row-outside">
+          <a href="#contact" class="btn-spotlight-primary">
+            Voir un aperçu des logements
+          </a>
+          <a href="tel:+213550000000" class="btn-spotlight-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+            Appeler la gestion locative
+          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CATALOGUE DES LOGEMENTS supprimée à la demande -->
+
+    <!-- SECTION SIMULATEUR DE SÉJOUR -->
+    <section class="section-simulator" id="simulateur">
+      <div class="section-container">
+        
+        <div class="simulator-layout">
+          
+          <div class="simulator-text">
+            <span class="section-pill">PLANIFIER VOTRE SÉJOUR</span>
+            <h2 class="simulator-title">Trouvez la formule idéale adaptée à vos besoins</h2>
+            <p class="simulator-desc">
+              Sélectionnez votre quartier préféré et votre typologie. Nous vous orientons immédiatement vers les appartements disponibles avec visite physique ou vidéo.
+            </p>
+
+            <div class="simulator-bullet-points">
+              <div class="sim-bullet">
+                <span class="bullet-check">✓</span>
+                <span>Réponse rapide par WhatsApp ou téléphone sous 24h</span>
+              </div>
+              <div class="sim-bullet">
+                <span class="bullet-check">✓</span>
+                <span>Toutes charges comprises (eau H24, chauffage, internet)</span>
+              </div>
+              <div class="sim-bullet">
+                <span class="bullet-check">✓</span>
+                <span>Réservation prioritaire pour la rentrée ou mutation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="simulator-card">
+            <form id="stay-simulator-form" class="sim-form">
+              <h3 class="sim-form-title">Simulateur de disponibilité</h3>
+              
+              <div class="sim-group">
+                <label class="sim-label">1. Quel est votre profil ?</label>
+                <div class="radio-chips-group">
+                  <label class="chip-label">
+                    <input type="radio" name="sim-profile" value="femme" checked>
+                    <span class="chip-text">Femme (Résidence dédiée)</span>
+                  </label>
+                  <label class="chip-label">
+                    <input type="radio" name="sim-profile" value="cadre">
+                    <span class="chip-text">Cadre / Professionnel</span>
+                  </label>
+                  <label class="chip-label">
+                    <input type="radio" name="sim-profile" value="couple">
+                    <span class="chip-text">Couple / Famille</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="sim-row-2">
+                <div class="sim-group">
+                  <label class="sim-label" for="sim-room-type">2. Typologie souhaitée</label>
+                  <select id="sim-room-type" class="sim-input" required>
+                    <option value="studio">Studio meublé (16 à 35 m²)</option>
+                    <option value="f1">F1 meublé (35 m²)</option>
+                    <option value="f2">F2 meublé (40 à 46 m²)</option>
+                    <option value="f3">F3 standing (50 à 80 m²)</option>
+                  </select>
+                </div>
+
+                <div class="sim-group">
+                  <label class="sim-label" for="sim-location-select">Quartier visé</label>
+                  <select id="sim-location-select" class="sim-input" required>
+                    <option value="tizi-ville">Tizi-Ouzou Ville</option>
+                    <option value="sud-ouest">Sud Ouest / Zone dépôts</option>
+                    <option value="thala-allam">Thala-Allam</option>
+                    <option value="bouaziz">Bouaziz / 4 Chemins</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sim-row-2">
+                <div class="sim-group">
+                  <label class="sim-label" for="sim-duration-select">3. Durée estimée</label>
+                  <select id="sim-duration-select" class="sim-input" required>
+                    <option value="moyen">Moyen terme (1 à 3 mois)</option>
+                    <option value="semestre">Semestre (4 à 6 mois)</option>
+                    <option value="annuel" selected>Long terme (1 an et +)</option>
+                  </select>
+                </div>
+                <div class="sim-group">
+                  <label class="sim-label" for="sim-start-date">Date d'emménagement</label>
+                  <input type="date" id="sim-start-date" class="sim-input" required>
+                </div>
+              </div>
+
+              <div class="sim-summary-box" id="sim-summary">
+                <div class="summary-line">
+                  <span class="sum-tag">Formule recommandée :</span>
+                  <strong id="sum-result-title">Studio Privatif en Résidence Réservée Femmes</strong>
+                </div>
+                <p class="sum-sub" id="sum-result-desc">
+                  Porte blindée, digicode, caméras, charges comprises (eau chaude H24, chauffage parties communes, fibre) et buanderie.
+                </p>
+              </div>
+
+              <button type="submit" class="btn-submit-simulator">
+                <span>Vérifier les logements disponibles pour cette formule →</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION FAQ INTERACTIVE -->
+    <section class="section-faq" id="faq">
+      <div class="section-container">
+        
+        <div class="section-heading-center">
+          <span class="section-pill">QUESTIONS FRÉQUENTES</span>
+          <h2 class="section-title">Tout ce que vous devez savoir avant de louer</h2>
+          <p class="section-subtitle">
+            Transparence totale sur le règlement intérieur, la sécurité, les charges et la vie chez Locappart.
+          </p>
+        </div>
+
+        <div class="faq-accordion-wrapper">
+          
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Comment la sécurité et le règlement intérieur sont-ils assurés ?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                La tranquillité de nos locataires est non négociable. Tous nos immeubles sont équipés de <strong>portes blindées</strong>, de <strong>digicodes d'accès sécurisés</strong> et de <strong>caméras de surveillance dans les parties communes</strong> (halls et paliers). Un règlement intérieur strict régit la vie des résidences : interdiction formelle du tapage nocturne, respect du voisinage et filtrage strict des visiteurs extérieurs.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Quelles sont exactement les charges comprises dans le loyer ?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Toutes les charges courantes sont incluses dans le montant du loyer</strong> : eau courante H24 (avec réserve d'eau et suppresseur), eau chaude continue, chauffage central individuel et chauffage des parties communes, connexion internet fibre optique très haut débit, ainsi que l'entretien et l'éclairage hebdomadaire des communs. Vous n'avez aucune facture supplémentaire surprise.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Comment fonctionnent les résidences exclusivement pour femmes ?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Nos deux résidences féminines sont strictement réservées aux femmes indépendantes (étudiantes universitaires, médecins internes, enseignantes, fonctionnaires et cadres). L'accès y est filtré et une régisseuse sur place veille à l'ordre, au respect mutuel et à l'assistance quotidienne.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Comment se passe l'accès à la laverie / buanderie ?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Selon la typologie du logement choisi, vous disposez soit d'une <strong>machine à laver privative</strong> installée directement dans l'appartement (F1, F2, F3), soit d'un accès sécurisé à l'<strong>espace buanderie/laverie collectif</strong> réservé aux résidentes au sein de l'immeuble.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Dans quels quartiers de Tizi Ouzou se trouvent les appartements ?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Nos logements sont idéalement implantés dans 4 secteurs stratégiques de Tizi Ouzou : <strong>Tizi-Ouzou ville</strong> (hyper-centre &amp; université), <strong>Sud Ouest / Zone des dépôts</strong> (accès facile et calme), <strong>Thala-Allam</strong> (résidentiel et verdoyant), et <strong>Bouaziz / Quatre chemins</strong> (carrefour dynamique avec tous les commerces).
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION CONTACT & RÉSERVATION PAR TÉLÉPHONE / WHATSAPP -->
+    <section class="section-contact" id="contact">
+      <div class="section-container">
+        
+        <div class="contact-card-wrapper">
+          
+          <div class="contact-info-col">
+            <div class="contact-brand">
+              <span class="contact-pill">CONTACT DIRECT GESTION LOCATIVE</span>
+              <h2 class="contact-title">Parlons de votre projet de logement</h2>
+              <p class="contact-desc">
+                Nous sommes à votre écoute pour organiser une visite physique ou vous envoyer des vidéos détaillées par WhatsApp.
+              </p>
+            </div>
+
+            <div class="contact-channels">
+              <a href="https://wa.me/213550000000?text=Bonjour%20Locappart,%20je%20souhaite%20des%20informations%20sur%20vos%20appartements%20meubl%C3%A9s" target="_blank" rel="noopener noreferrer" class="contact-channel-card whatsapp-highlight">
+                <div class="ch-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.56C8.84 7.56 8.52 7.63 8.25 7.93C7.99 8.22 7.23 8.93 7.23 10.39C7.23 11.85 8.29 13.26 8.44 13.46C8.59 13.66 10.5 16.78 13.5 17.95C15.97 18.92 16.48 18.73 17.02 18.68C17.56 18.63 18.77 17.96 19.02 17.26C19.27 16.56 19.27 15.96 19.19 15.83C19.12 15.71 18.92 15.64 18.62 15.49C18.32 15.34 16.84 14.61 16.57 14.51C16.29 14.41 16.09 14.36 15.89 14.66C15.69 14.96 15.12 15.64 14.95 15.84C14.77 16.04 14.6 16.06 14.3 15.91C14 15.76 12.75 15.35 11.26 14.02C10.1 12.98 9.32 11.69 9.17 11.44C9.02 11.19 9.15 11.05 9.3 10.9C9.44 10.76 9.61 10.53 9.76 10.36C9.91 10.19 9.96 10.06 10.06 9.86C10.16 9.66 10.11 9.49 10.04 9.34C9.96 9.19 9.36 7.72 9.11 7.12C8.87 6.54 8.62 6.62 8.44 6.61C8.26 6.61 8.06 6.61 7.86 6.61L9.04 7.56Z"/></svg>
+                </div>
+                <div>
+                  <strong>WhatsApp Direct (Conseillé)</strong>
+                  <span>Réponse rapide 7j/7 • Envoi de photos &amp; vidéos</span>
+                </div>
+              </a>
+
+              <a href="tel:+213550000000" class="contact-channel-card phone-highlight">
+                <div class="ch-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+                </div>
+                <div>
+                  <strong>Appel Téléphonique Direct</strong>
+                  <span>0550 00 00 00 (Service gestion locative)</span>
+                </div>
+              </a>
+
+              <div class="contact-channel-card">
+                <div class="ch-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <strong>Secteurs couverts à Tizi Ouzou</strong>
+                  <span>Tizi-Ouzou Ville • Sud-Ouest • Thala-Allam • Bouaziz</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-col">
+            <form id="main-contact-form" class="site-contact-form">
+              <h3 class="form-heading">Formulaire de demande d'informations ou de visite</h3>
+              
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="contact-name" class="field-label">Votre nom &amp; prénom *</label>
+                  <input type="text" id="contact-name" class="field-input" placeholder="Ex: Amira Haddad" required>
+                </div>
+                <div class="form-field">
+                  <label for="contact-phone" class="field-label">Numéro de téléphone / WhatsApp *</label>
+                  <input type="tel" id="contact-phone" class="field-input" placeholder="0550 00 00 00" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="contact-interest" class="field-label">Typologie recherchée</label>
+                  <select id="contact-interest" class="field-input">
+                    <option value="studio">Studio meublé (16 à 35 m²)</option>
+                    <option value="f1">F1 meublé (35 m²)</option>
+                    <option value="f2">F2 meublé (40 à 46 m²)</option>
+                    <option value="f3">F3 meublé (50 à 80 m²)</option>
+                    <option value="residence-femme">Résidence Réservée Femmes</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="contact-zone" class="field-label">Quartier préféré</label>
+                  <select id="contact-zone" class="field-input">
+                    <option value="indifferent">Peu importe / À conseiller</option>
+                    <option value="tizi-ville">Tizi-Ouzou Ville</option>
+                    <option value="sud-ouest">Sud Ouest / Zone des dépôts</option>
+                    <option value="thala-allam">Thala-Allam</option>
+                    <option value="bouaziz">Bouaziz / Quatre chemins</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-message" class="field-label">Votre message ou précision sur votre situation</label>
+                <textarea id="contact-message" class="field-input field-textarea" rows="4" placeholder="Précisez votre durée de séjour prévue, date d'arrivée souhaitée ou vos disponibilités pour une visite..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit-contact">
+                <span>Envoyer ma demande de renseignements</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </button>
+              
+              <span class="form-privacy-note">
+                🔒 Vos coordonnées restent strictement confidentielles. Gestion directe par le propriétaire.
+              </span>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL DÉTAILS D'UN LOGEMENT (Dynamique) -->
+  <div class="modal-backdrop" id="property-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close" aria-label="Fermer la modal">×</button>
+      
+      <div class="modal-content" id="modal-dynamic-content">
+        <!-- Rempli dynamiquement par site.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PIED DE PAGE DU SITE -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <div class="footer-brand-col">
+        <a href="#" class="footer-logo">
+          <!-- Logo version sombre -->
+          <svg viewBox="0 0 350 76" fill="none" width="220" height="48">
+            <g transform="translate(6, 6) scale(0.72)">
+              <path d="M22 22C22 15.3726 27.3726 10 34 10C40.6274 10 46 15.3726 46 22V58H66C72.6274 58 78 63.3726 78 70C78 76.6274 72.6274 82 66 82H34C27.3726 82 22 76.6274 22 70V22Z" fill="#F7F5F0"/>
+              <path d="M38 36C38 27.1634 45.1634 20 54 20C62.8366 20 70 27.1634 70 36V54H54C45.1634 54 38 45.9543 38 36Z" fill="#58CDBF"/>
+              <circle cx="54" cy="36" r="5" fill="#102D3A"/>
+            </g>
+            <g transform="translate(78, 0)">
+              <text x="0" y="44" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="33" font-weight="800" fill="#FFFFFF" letter-spacing="-0.8">LOC</text>
+              <text x="70" y="44" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="33" font-weight="400" fill="#E2EDF0" letter-spacing="-0.4">APPART</text>
+              <circle cx="214" cy="40" r="4.5" fill="#58CDBF"/>
+              <text x="2" y="62" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8.8" font-weight="700" fill="#93B4C1" letter-spacing="3.2">LOGEMENTS MEUBLÉS • TIZI OUZOU</text>
+            </g>
+          </svg>
+        </a>
+        <p class="footer-tagline">
+          Locappart est un parc immobilier privé à Tizi Ouzou. Appartements 100% meublés moyen et long terme avec charges comprises, sécurité renforcée et respect scrupuleux du règlement intérieur.
+        </p>
+        <div class="footer-social-links">
+          <span class="social-tag">Eau H24 Garantie</span>
+          <span class="social-tag">Portes blindées</span>
+          <span class="social-tag">Digicodes</span>
+          <span class="social-tag">Caméras</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Typologies Disponibles</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#logements" onclick="filterByTag('studio')">Studios meublés (16 à 35 m²)</a></li>
+          <li><a href="#logements" onclick="filterByTag('f1')">Appartements F1 (35 m²)</a></li>
+          <li><a href="#logements" onclick="filterByTag('f2')">Appartements F2 (40 à 46 m²)</a></li>
+          <li><a href="#logements" onclick="filterByTag('f3')">Appartements F3 (50 à 80 m²)</a></li>
+          <li><a href="#residences-femmes">Résidences 100% Femmes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Quartiers à Tizi Ouzou</h4>
+        <ul class="footer-nav-list">
+          <li><span>Tizi-Ouzou Ville</span></li>
+          <li><span>Sud Ouest / Zone des dépôts</span></li>
+          <li><span>Thala-Allam</span></li>
+          <li><span>Bouaziz / Quatre chemins</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Ligne Directe &amp; Contact</h4>
+        <ul class="footer-nav-list">
+          <li><a href="tel:+213550000000" style="color:#58CDBF; font-weight:700;">📞 0550 00 00 00</a></li>
+          <li><a href="https://wa.me/213550000000" target="_blank" rel="noopener noreferrer" style="color:#25D366; font-weight:700;">💬 WhatsApp Direct</a></li>
+          <li><a href="#securite">Sécurité &amp; Règlement</a></li>
+          <li><a href="#charges-comprises">Pack Toutes Charges Comprises</a></li>
+          <li><a href="brand-presentation.html" class="footer-da-link">Direction Artistique (Charte)</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="bottom-container">
+        <span>&copy; 2026 LOCAPPART — Tous droits réservés. Gestion immobilière privée à Tizi Ouzou.</span>
+        <span>Appartements 100% meublés • Eau H24 • Chauffage • Fibre • Digicodes</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" fill="none">
+  <!-- Direction 1: L'Écrin Géométrique - Logo Horizontal (Fond Sombre) -->
+  <defs>
+    <linearGradient id="d1-d-turq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#88E8D8"/>
+      <stop offset="100%" stop-color="#58CDBF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Symbole -->
+  <g transform="translate(8, 6) scale(0.72)">
+    <!-- L Architectural blanc crème -->
+    <path d="M16 24C16 16.268 22.268 10 30 10H36C39.3137 10 42 12.6863 42 16V60C42 63.3137 44.6863 66 48 66H70C73.3137 66 76 68.6863 76 72V76C76 79.3137 73.3137 82 70 82H28C21.3726 82 16 76.6274 16 70V24Z" fill="#F4F1E9"/>
+    <!-- Fenêtre turquoise lumineuse -->
+    <path d="M48 20C48 16.6863 50.6863 14 54 14H60C63.3137 14 66 16.6863 66 20V50C66 52.2091 64.2091 54 62 54H52C49.7909 54 48 52.2091 48 50V20Z" fill="url(#d1-d-turq)"/>
+    <circle cx="57" cy="26" r="2.5" fill="#102D3A" opacity="0.9"/>
+  </g>
+
+  <!-- Logotype Text -->
+  <g transform="translate(82, 0)">
+    <!-- LOC en blanc pur -->
+    <text x="0" y="44" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.8">LOC</text>
+    <!-- APPART en ivoire doux -->
+    <text x="73" y="44" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="34" font-weight="400" fill="#E2EDF0" letter-spacing="-0.5">APPART</text>
+    <!-- Accent dot turquoise vibrant -->
+    <circle cx="218" cy="40" r="4.5" fill="#75D6C5"/>
+
+    <!-- Baseline -->
+    <text x="2" y="62" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#93B4C1" letter-spacing="3.2">RÉSIDENCES &amp; APPARTEMENTS • TIZI OUZOU</text>
+  </g>
+</svg>

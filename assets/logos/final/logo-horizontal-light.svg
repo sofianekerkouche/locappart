@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 76" fill="none">
+  <!-- LOCAPPART — Logo Officiel Validé (Fond Clair) -->
+  <!-- Symbole : Monogramme Fluide DA 2 -->
+  <!-- Typographie : Majuscules Contrastées DA 1 + Sous-titre officiel -->
+  <defs>
+    <linearGradient id="loc-petrol" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143A4B"/>
+      <stop offset="100%" stop-color="#0E2833"/>
+    </linearGradient>
+    <linearGradient id="loc-turq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6FE2D0"/>
+      <stop offset="100%" stop-color="#4ABFA0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Symbole Monogramme Fluide -->
+  <g transform="translate(6, 6) scale(0.72)">
+    <!-- Boucle L enveloppante -->
+    <path d="M22 22C22 15.3726 27.3726 10 34 10C40.6274 10 46 15.3726 46 22V58H66C72.6274 58 78 63.3726 78 70C78 76.6274 72.6274 82 66 82H34C27.3726 82 22 76.6274 22 70V22Z" fill="url(#loc-petrol)"/>
+    <!-- Arche intérieure / Seuil lumineux turquoise -->
+    <path d="M38 36C38 27.1634 45.1634 20 54 20C62.8366 20 70 27.1634 70 36V54H54C45.1634 54 38 45.9543 38 36Z" fill="url(#loc-turq)"/>
+    <circle cx="54" cy="36" r="5" fill="#FAF8F5"/>
+  </g>
+
+  <!-- Typographie : Majuscules DA 1 -->
+  <g transform="translate(78, 0)">
+    <!-- LOC (Graisse 800) -->
+    <text x="0" y="44" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="33" font-weight="800" fill="#0E2833" letter-spacing="-0.8">LOC</text>
+    <!-- APPART (Graisse 400) -->
+    <text x="70" y="44" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="33" font-weight="400" fill="#174254" letter-spacing="-0.4">APPART</text>
+    <!-- Point signature turquoise -->
+    <circle cx="214" cy="40" r="4.5" fill="#58CDBF"/>
+
+    <!-- Sous-titre officiel validé -->
+    <text x="2" y="62" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="8.8" font-weight="700" fill="#6B8894" letter-spacing="3.2">LOGEMENTS MEUBLÉS • TIZI OUZOU</text>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Favicon Direction 1 -->
+  <rect width="100" height="100" rx="24" fill="#102D3A"/>
+  <path d="M26 28C26 22 30 18 36 18H40C43 18 45 20 45 23V58C45 61 47 63 50 63H68C71 63 73 65 73 68V72C73 75 71 77 68 77H34C29 77 26 74 26 69V28Z" fill="#F4F1E9"/>
+  <path d="M51 26C51 23 53 21 56 21H60C63 21 65 23 65 26V50C65 52 63 54 61 54H55C53 54 51 52 51 50V26Z" fill="#75D6C5"/>
+  <circle cx="58" cy="30" r="2.5" fill="#102D3A"/>
+</svg>

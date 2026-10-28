@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Direction 1: L'Écrin Géométrique - Symbol -->
+  <!-- Base structure: L architectural avec arche subtile et fenêtre lumineuse -->
+  <defs>
+    <linearGradient id="d1-grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143A4B"/>
+      <stop offset="100%" stop-color="#0A1E27"/>
+    </linearGradient>
+    <linearGradient id="d1-grad-turq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7BE2D1"/>
+      <stop offset="100%" stop-color="#4CBCAE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- L Architectural Frame: Arche supérieure arrondie, socle net -->
+  <path d="M22 28C22 20.268 28.268 14 36 14H42C45.3137 14 48 16.6863 48 20V62C48 65.3137 50.6863 68 54 68H76C79.3137 68 82 70.6863 82 74V80C82 83.3137 79.3137 86 76 86H34C27.3726 86 22 80.6274 22 74V28Z" fill="url(#d1-grad-blue)"/>
+  
+  <!-- Fenêtre intérieure lumineuse / Espace privé turquoise (forme d'arche contemporaine) -->
+  <path d="M54 26C54 21.5817 57.5817 18 62 18H66C70.4183 18 74 21.5817 74 26V54C74 56.2091 72.2091 58 70 58H58C55.7909 58 54 56.2091 54 54V26Z" fill="url(#d1-grad-turq)"/>
+  
+  <!-- Point focal lumière / sérénité -->
+  <circle cx="64" cy="32" r="3" fill="#FFFFFF" opacity="0.85"/>
+</svg>

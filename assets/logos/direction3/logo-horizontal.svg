@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" fill="none">
+  <!-- Direction 3: Empreinte Modulaire - Logo Horizontal (Fond clair) -->
+  <defs>
+    <linearGradient id="d3-h-p1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#194B60"/>
+      <stop offset="100%" stop-color="#0D222E"/>
+    </linearGradient>
+    <linearGradient id="d3-h-p2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#23617A"/>
+      <stop offset="100%" stop-color="#123847"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Symbole modulaire -->
+  <g transform="translate(10, 8) scale(0.68)">
+    <rect x="18" y="10" width="20" height="72" rx="6" fill="url(#d3-h-p1)"/>
+    <rect x="42" y="28" width="18" height="54" rx="5" fill="url(#d3-h-p2)"/>
+    <rect x="64" y="52" width="18" height="30" rx="5" fill="#2EB8A1"/>
+    <circle cx="73" cy="40" r="5" fill="#E29D52"/>
+  </g>
+
+  <!-- Typographie (Epilogue / Plus Jakarta Sans) -->
+  <g transform="translate(86, 0)">
+    <text x="0" y="44" font-family="'Epilogue', 'Plus Jakarta Sans', sans-serif" font-size="33" font-weight="800" fill="#0D222E" letter-spacing="-0.8">LOC<tspan font-weight="500" fill="#1B495C">APPART</tspan></text>
+    <rect x="226" y="30" width="8" height="8" rx="2" fill="#E29D52"/>
+    <text x="2" y="62" font-family="'Epilogue', 'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#718B97" letter-spacing="3.4">IMMOBILIER RÉSIDENTIEL • TIZI OUZOU</text>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" fill="none">
+  <!-- Direction 2: Monogramme Fluide - Logo Horizontal (Fond clair) -->
+  <defs>
+    <linearGradient id="d2-h-petrol" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A4A5E"/>
+      <stop offset="100%" stop-color="#0E2833"/>
+    </linearGradient>
+    <linearGradient id="d2-h-mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE0CC"/>
+      <stop offset="100%" stop-color="#41BBAA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Symbole transformé -->
+  <g transform="translate(10, 6) scale(0.72)">
+    <path d="M22 22C22 15.3726 27.3726 10 34 10C40.6274 10 46 15.3726 46 22V58H66C72.6274 58 78 63.3726 78 70C78 76.6274 72.6274 82 66 82H34C27.3726 82 22 76.6274 22 70V22Z" fill="url(#d2-h-petrol)"/>
+    <path d="M38 36C38 27.1634 45.1634 20 54 20C62.8366 20 70 27.1634 70 36V54H54C45.1634 54 38 45.9543 38 36Z" fill="url(#d2-h-mint)"/>
+    <circle cx="54" cy="36" r="5" fill="#FAF8F5"/>
+  </g>
+
+  <!-- Typographie (Sora) -->
+  <g transform="translate(84, 0)">
+    <!-- locappart en minuscules contemporaines stylisées -->
+    <text x="0" y="44" font-family="'Sora', 'Plus Jakarta Sans', sans-serif" font-size="33" font-weight="700" fill="#0E2833" letter-spacing="-0.5">loc<tspan font-weight="300" fill="#1A4A5E">appart</tspan></text>
+    
+    <!-- Ligne de sous-titre et point d'accent -->
+    <circle cx="186" cy="38" r="4" fill="#41BBAA"/>
+    <text x="2" y="62" font-family="'Sora', sans-serif" font-size="8.5" font-weight="600" fill="#758B94" letter-spacing="3.5">LOGEMENTS MEUBLÉS • TIZI OUZOU</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" fill="none">
+  <!-- Direction 3: Empreinte Modulaire - Logo Horizontal (Fond sombre) -->
+  <g transform="translate(10, 8) scale(0.68)">
+    <rect x="18" y="10" width="20" height="72" rx="6" fill="#FFFFFF"/>
+    <rect x="42" y="28" width="18" height="54" rx="5" fill="#D2E4EA"/>
+    <rect x="64" y="52" width="18" height="30" rx="5" fill="#32D2B8"/>
+    <circle cx="73" cy="40" r="5" fill="#F3A759"/>
+  </g>
+
+  <g transform="translate(86, 0)">
+    <text x="0" y="44" font-family="'Epilogue', 'Plus Jakarta Sans', sans-serif" font-size="33" font-weight="800" fill="#FFFFFF" letter-spacing="-0.8">LOC<tspan font-weight="500" fill="#C5DCE4">APPART</tspan></text>
+    <rect x="226" y="30" width="8" height="8" rx="2" fill="#F3A759"/>
+    <text x="2" y="62" font-family="'Epilogue', 'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#91ABB7" letter-spacing="3.4">IMMOBILIER RÉSIDENTIEL • TIZI OUZOU</text>
+  </g>
+</svg>
