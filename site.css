@@ -2631,3 +2631,104 @@ body.theme-residence-heritage .float-phone:hover {
     font-size: 14px;
   }
 }
+
+
+.inclusive-title-start,
+.inclusive-title-middle { display: inline; }
+
+/* Ajustements dédiés à la version mobile Locappart */
+@media (max-width: 768px) {
+  /* Le header mobile conserve uniquement le bouton de contact */
+  .btn-phone-header {
+    display: none !important;
+  }
+
+  .header-actions {
+    margin-left: auto;
+    gap: 0;
+  }
+
+  .btn-contact-header {
+    padding: 11px 14px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* Les deux CTA de contact de la bannière sont redondants avec l'appel flottant */
+  .section-quick-cta {
+    display: none !important;
+  }
+
+  /* Les engagements en pastilles sont masqués uniquement sur mobile */
+  .hero-highlights-strip {
+    display: none !important;
+  }
+
+  /* Chaque filtre est présenté dans son propre encadré, sur une ligne */
+  .search-filter-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+    align-items: stretch;
+  }
+
+  .search-field {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #DCE5E8;
+    border-radius: 10px;
+    background: #FFFFFF;
+    gap: 8px;
+  }
+
+  .search-label {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .search-select {
+    min-height: 46px;
+    padding: 12px 32px 12px 12px;
+    font-size: 13px;
+  }
+
+  .search-submit-btn {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  /* Titre des charges : trois lignes nettes sur téléphone */
+  .inclusive-title-start,
+  .inclusive-title-middle,
+  .section-all-inclusive .title-block.title-accent {
+    display: block;
+  }
+
+  .section-heading-center .section-title {
+    line-height: 1.28;
+  }
+
+  /* Carte de charte plus large : réduction des marges latérales */
+  .section-security .section-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .security-box {
+    padding: 18px 10px;
+    gap: 24px;
+  }
+
+  .security-card-visual {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .residence-rule-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 18px;
+  }
+}
