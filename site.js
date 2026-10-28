@@ -504,9 +504,10 @@ function initContactForm() {
     e.preventDefault();
     const name = document.getElementById('contact-name').value.trim();
     const phone = document.getElementById('contact-phone').value.trim();
+    const situation = document.getElementById('contact-situation')?.value || '';
 
-    if (!name || !phone) {
-      showToast("Veuillez renseigner votre nom et votre numéro de téléphone / WhatsApp.");
+    if (!name || !phone || !situation) {
+      showToast("Veuillez renseigner votre nom, votre numéro de téléphone et votre situation.");
       return;
     }
 
