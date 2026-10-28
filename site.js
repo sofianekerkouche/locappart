@@ -28,7 +28,7 @@ const PROPERTIES_DATA = {
       "Régisseuse de résidence sur place"
     ],
     terms: "Toutes charges comprises dans le loyer (eau, électricité, chauffage, internet). Moyen et long terme (semestre universitaire ou bail annuel).",
-    phone: "0550 00 00 00"
+    phone: "0550 98 16 18"
   },
   'prop-2': {
     title: "Grand Studio Équipé • Centre Tizi-Ouzou",
@@ -52,7 +52,7 @@ const PROPERTIES_DATA = {
       "Maintenance réactive 7j/7"
     ],
     terms: "Toutes charges comprises. Bail étudiant ou bail professionnel pour femme active. Zéro frais d'agence.",
-    phone: "0550 00 00 00"
+    phone: "0550 98 16 18"
   },
   'prop-3': {
     title: "Appartement F1 Meublé • Bouaziz",
@@ -75,7 +75,7 @@ const PROPERTIES_DATA = {
       "Quartier vivant et commerçant"
     ],
     terms: "Loyer charges comprises. Séjour moyen ou long terme (dès 1 mois). Dépôt de garantie équivalent à 1 mois.",
-    phone: "0550 00 00 00"
+    phone: "0550 98 16 18"
   },
   'prop-4': {
     title: "Appartement F2 Sérénité • Sud-Ouest",
@@ -98,7 +98,7 @@ const PROPERTIES_DATA = {
       "Règlement intérieur strict et respectueux"
     ],
     terms: "Charges complètes comprises. Bail déclaré. Possibilité de colocation féminine pour deux résidentes.",
-    phone: "0550 00 00 00"
+    phone: "0550 98 16 18"
   },
   'prop-5': {
     title: "L'Atelier Urbain • F2 Standing Tizi-Ville",
@@ -121,7 +121,7 @@ const PROPERTIES_DATA = {
       "Facturation entreprise disponible sur demande"
     ],
     terms: "Loyer tout compris (eau, électricité, chauffage, wifi). Convention société possible pour baux professionnels.",
-    phone: "0550 00 00 00"
+    phone: "0550 98 16 18"
   },
   'prop-6': {
     title: "Appartement F3 Familial • Les Oliviers Bouaziz",
@@ -144,7 +144,7 @@ const PROPERTIES_DATA = {
       "Fibre Wifi illimitée"
     ],
     terms: "Toutes charges courantes comprises. Longue durée privilégiée (6 mois à 1 an renouvelable).",
-    phone: "0550 00 00 00"
+    phone: "0550 98 16 18"
   },
   'prop-7': {
     title: "L'Exécutif Thala • Grand F3 Haut de Gamme",
@@ -168,7 +168,7 @@ const PROPERTIES_DATA = {
       "Règlement strict garantissant un standing irréprochable"
     ],
     terms: "Bail de 6 à 24 mois. Charges comprises. Idéal pour cadres dirigeants, directeurs de mission ou familles exigeantes.",
-    phone: "0550 00 00 00"
+    phone: "0550 98 16 18"
   }
 };
 
@@ -343,9 +343,9 @@ window.openPropertyModal = function(propId) {
           <span>WhatsApp Direct</span>
         </a>
 
-        <a href="tel:+213550000000" class="modal-phone-btn">
+        <a href="tel:+213550981618" class="modal-phone-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
-          <span>Appeler : 0550 00 00 00</span>
+          <span>Appeler : 0550 98 16 18</span>
         </a>
 
         <button class="modal-action-btn" onclick="selectPropertyForBooking('${prop.title.replace(/'/g, "\\'")}')">
